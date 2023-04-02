@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ContainerNavbar{
+
+
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  height: 60px;
+  padding: 10px;
+  
+
+}
+
+
+
+
+.Logo {
+  height: 60px;
+  border-radius: 100%;
+  
+}
+ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+a{
+  margin: 0 20px;
+  text-decoration: none;
+  color: white;
+}
+
