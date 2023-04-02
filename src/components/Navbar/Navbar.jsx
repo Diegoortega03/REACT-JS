@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   return (
+    
     <div className={styles.ContainerNavbar}>
       <nav className={styles.Navbar}>
         <img
