@@ -1,0 +1,29 @@
+{
+
+    "products":[
+        {
+          "nombre": "Camiseta",
+          "precio": 20.99,
+          "descripcion": "Camiseta de algodón con estampado floral",
+          "disponibilidad": true
+        },
+        {
+          "nombre": "Pantalón",
+          "precio": 39.99,
+          "descripcion": "Pantalón de mezclilla ajustado al cuerpo",
+          "disponibilidad": false
+        },
+        {
+          "nombre": "Zapatos deportivos",
+          "precio": 79.99,
+          "descripcion": "Zapatos deportivos con tecnología de amortiguación",
+          "disponibilidad": true
+        },
+        {
+          "nombre": "Chaqueta de cuero",
+          "precio": 199.99,
+          "descripcion": "Chaqueta de cuero genuino con cierre de cremallera",
+          "disponibilidad": true
+        }
+      ]
+}
