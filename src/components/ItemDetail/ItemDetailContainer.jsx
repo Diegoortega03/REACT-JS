@@ -11,15 +11,15 @@ const ItemDetailContainer = () => {
    const [product, setProduct ] = useState ({})
 
 
-   let id=2;
 
 
-     /* const (x)=useParams()
-    console.log(x) */
+
+    const {id}=useParams()
+    console.log(id) 
 
    useEffect(()=>{
 
-let encontrado= products.find(prod => prod.id===id)
+let encontrado= products.find((prod)=> prod.id=== Number(id))
 
   setProduct(encontrado);
 

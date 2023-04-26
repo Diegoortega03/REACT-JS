@@ -8,10 +8,13 @@ export const ItemCard = ({item}) => {
   return (
     <Card sx={{ Width: 350 , height:350 }} >
     <CardMedia
+      sx={{height:"140"}}
       component="img"
+      image={item.img}
+      title="green iguana"
       alt="green iguana"
       height="140"
-      image= {item.img}
+      
     />
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">
@@ -30,7 +33,7 @@ export const ItemCard = ({item}) => {
 
     </CardContent>
     <CardActions style={{height:"100px"}}> 
-    <Link to="/item/${item.id}" element ={<ItemDetailContainer/>}>
+    <Link to={`/item/${item.id}`} element ={<ItemDetailContainer/>}>
       <Button variant="contained" size="small">VER DETALLE</Button>
     </Link>
     </CardActions>
