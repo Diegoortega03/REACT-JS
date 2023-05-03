@@ -6,7 +6,7 @@ export let products=[
         category:"roja",
         description:"Esta es la IPA mas rica",
         img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
-        stock:"100"
+        stock:"10"
     
     },
 
@@ -17,7 +17,7 @@ export let products=[
         category:"rubia",
         description:"Esta es la IPA mas rica",
         img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
-        stock:"100"
+        stock:"5"
     
     },
 
@@ -28,7 +28,7 @@ export let products=[
         category:"roja",
         description:"Esta es la IPA mas rica",
         img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
-        stock:"100"
+        stock:"10"
     
     },
 
@@ -39,7 +39,7 @@ export let products=[
         category:"roja",
         description:"Esta es la IPA mas rica",
         img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
-        stock:"100"
+        stock:"4"
     
     }
 

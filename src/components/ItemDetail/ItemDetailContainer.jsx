@@ -11,25 +11,32 @@ const ItemDetailContainer = () => {
    const [product, setProduct ] = useState ({})
 
 
-
-
-
-    const {id}=useParams()
-    console.log(id) 
+  const {id}=useParams()
+    
 
    useEffect(()=>{
 
-let encontrado= products.find((prod)=> prod.id=== Number(id))
+  let encontrado= products.find((prod)=> prod.id=== Number(id))
 
   setProduct(encontrado);
 
    } ,[id])
 
 
+   const onAdd=(cantidad)=>{
+
+    let data={
+      ...product,
+      quantity:cantidad
+    }
+    console.log(data)
+  }
+
+
 
   return (
     <div>
-        <ItemDetail product={product}/>
+        <ItemDetail product={product} onAdd={onAdd}/>
     </div>
   )
 }

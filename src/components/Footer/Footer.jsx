@@ -1,9 +1,21 @@
-import React from 'react'
+import { Grid, Typography } from "@mui/material";
+import React from "react";
 
 const Footer = () => {
   return (
-    <div></div>
-  )
-}
+    <div>
+      <Container>
+        <Grid container>
+          <Grid>
+            <Typography variant="h3">Productos</Typography>
+            <Typography variant="h3">Rubias</Typography>
+            <Typography variant="h3">Rojas</Typography>
 
-export default Footer
+          </Grid>
+        </Grid>
+      </Container>
+    </div>
+  );
+};
+
+export default Footer;

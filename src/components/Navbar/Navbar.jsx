@@ -1,15 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import styles from "./Navbar.module.css";
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import { AppBar, Button, Grid, Tab, Tabs, Toolbar, Typography } from "@mui/material";
-import{Home} from "../Home/Home"
 export const Navbar = () => {
   return (
     <div>
       <div >
       
-       <nav className={styles.Navbar}>
+       <Navbar className={styles.Navbar}>
         
         <Link to="/">
         <img
@@ -27,7 +24,7 @@ export const Navbar = () => {
        
         <CartWidget />
       
-      </nav> 
+      </Navbar> 
       <Outlet />
         
        
