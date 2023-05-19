@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
+
 .ContainerNavbar{
-
-
+   
+ 
   display: flex;
   justify-content: center;
   
@@ -15,6 +17,7 @@
 
 
 .Navbar {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +25,7 @@
   width: 100vw;
   height: 60px;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color:#ffffff;
   color: #333;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -48,9 +51,92 @@ ul{
 
 }
 
-a{
-  margin: 0 20px;
+a {
+  margin-left: 4rem;
+  color: #000000;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  position: relative;
 }
 
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 40px;
+  left: 50%; /* ajusta esta propiedad para centrar horizontalmente el menú desplegable */
+  transform: translateX(-50%);
+ 
+}
+
+.dropdownLink {
+  padding: 8px 8px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  right: 15%;
+ 
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .footer-left li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-center a {
+    color: #333;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .footer-right img {
+    width: 80px;
+    height: auto;
+  }
+  
+  /* Estilos adicionales según tus necesidades */
+  /* Por ejemplo, para el enlace activo en la lista */
+  .footer-left li.active {
+    font-weight: bold;
+  }
+  
+  /* Estilos para los enlaces de redes sociales */
+  .footer-center a:hover {
+    color: blue;
+  }

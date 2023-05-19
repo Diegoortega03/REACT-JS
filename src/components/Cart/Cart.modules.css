@@ -1,0 +1,39 @@
+/* cartStyles.css */
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .cart-item {
+    border: 2px solid black;
+    width: 45%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .cart-item h3 {
+    margin: 0;
+  }
+  
+  .cart-item h4 {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .cart-item button {
+    margin-left: auto;
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+  }
+  

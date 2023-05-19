@@ -1,18 +1,19 @@
 import { ItemCard } from "./ItemCard";
-
+import styles from "./ItemList.module.css";
 
 export const ItemList = ({ items }) => {
   console.log(items);
 
   return (
-    <div style={{ display: "flex", border:"2px solid blue" , justifyContent:"space-evenly", flexWrap:"wrap"  }}>
+    <div className={styles.ContainerItemList}>
       {items.map((item) => {
-        return (
-       <ItemCard item={item} key={item.id}/>
-        );
+
+        
+        return <ItemCard item={item} key={item.id}  />;
       })}
     </div>
   );
 };
+
 
 

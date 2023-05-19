@@ -2,20 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-.ContainerHome{
-    height: 80vh;
-    background-image:linear-gradient(0deg, rgba(0,0,0,0)
-    , rgba(0,0,0,0.1) ) , url("https://res.cloudinary.com/dpiruiu8g/image/upload/v1681335497/PhotoEditor_20190808_164513598_xgwlaj.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.heroContainer {
+
     position: relative;
+    height: 500px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://res.cloudinary.com/dpiruiu8g/image/upload/v1681335497/PhotoEditor_20190808_164513598_xgwlaj.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+ 
+  .heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+  }
+
+  .cards{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .card {
     
+    margin-left: 6rem;
+    width: 400px;
+    height: 300px;
+    background-image: url("https://res.cloudinary.com/dpiruiu8g/image/upload/v1683507237/dds_cg1law.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .cardDos {
     
-    
-} 
+    margin-left: 20rem;
+    width: 400px;
+    height: 300px;
+    background-image: url("https://res.cloudinary.com/dpiruiu8g/image/upload/v1683508888/CHOUPO_cyb1qz.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .cardDos:hover {
+    transform: scale(1.05);
+  }
+  .cardText{
+    margin-left: 1rem;
+    margin-top:1rem ;
+    width: 70%;
+    background-color: rgba(84, 77, 77, 0.5);
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cardText h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .cardText p {
+    margin: 10px 0;
+  }
+  

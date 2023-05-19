@@ -9,22 +9,39 @@ import { Form } from "./components/Form/Form";
 import {Outlet} from "react-router-dom"
 import CartContextProvider from "./Context/CartContext";
 import CartContainer from "./components/Cart/CartContainer";
+import { Home } from "./components/Home/Home";
+import Contact from "./components/Contacto/Contact";
+import FormCheckout from "./components/FormCheckout/FormCheckout";
+import FormCheckoutContainer from "./components/FormCheckout/FormCheckoutContainer";
+import Footer from "./components/Footer/Footer";
+
 function App() {
   return (
     <BrowserRouter>
       <CartContextProvider>
+        
       <Routes>
+      
       <Route element={<Navbar/>}>
-
+      <Route element={<Footer/>}>
+      
+     
 
       
-      <Route  path="/" element={<ItemListContainer/>}/>
+      <Route  path="/" element={<Home/>}/>
+      <Route  path="/SHOP" element={<ItemListContainer/>}/>
       <Route  path="/category/:categoryName" element={<ItemListContainer/>}/>
       <Route path="/item/:id" element={<ItemDetailContainer/>}/>
       <Route path="/sign-up" element={<h1>aca deberias registrarte</h1>} />
       <Route path="/cart" element={<CartContainer/>}/>
-      <Route path="/form" element={<Form/>} />
-    
+      <Route path="/checkout" element={<FormCheckoutContainer/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="/contact" element={<Footer/>} />
+
+      
+      
+      </Route>
+     
       </Route>
       <Route path="*" element={<h3>404 not found</h3>}/>
       </Routes>

@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
   
-  const { cart}= useContext(CartContext)
-  
+  const {getTotalQuantity}= useContext(CartContext)
+  let total= getTotalQuantity()
   return (
    <Link to="/cart"> <div className={styles.Carrito}>
       <BsFillCartCheckFill size={30} />
-      <span>{0}</span>
+      <span>{total}</span>
     </div>
     </Link>
   );

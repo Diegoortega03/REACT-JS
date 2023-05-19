@@ -1,0 +1,41 @@
+/* Estilos para el footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .footer-left li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-center a {
+    color: #333;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .footer-right img {
+    width: 80px;
+    height: auto;
+  }
+  
+  /* Estilos adicionales según tus necesidades */
+  /* Por ejemplo, para el enlace activo en la lista */
+  .footer-left li.active {
+    font-weight: bold;
+  }
+  
+  /* Estilos para los enlaces de redes sociales */
+  .footer-center a:hover {
+    color: blue;
+  }

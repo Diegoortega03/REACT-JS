@@ -5,7 +5,7 @@ export let products=[
         price:300,
         category:"roja",
         description:"Esta es la IPA mas rica",
-        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
+        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1683673578/IPA_rcmjpi-removebg-preview_v3lj3i.png",
         stock:"10"
     
     },
@@ -16,7 +16,7 @@ export let products=[
         price:300,
         category:"rubia",
         description:"Esta es la IPA mas rica",
-        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
+        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1683673578/IPA_rcmjpi-removebg-preview_v3lj3i.png",
         stock:"5"
     
     },
@@ -27,7 +27,7 @@ export let products=[
         price:300,
         category:"roja",
         description:"Esta es la IPA mas rica",
-        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
+        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1683673578/IPA_rcmjpi-removebg-preview_v3lj3i.png",
         stock:"10"
     
     },
@@ -38,7 +38,7 @@ export let products=[
         price:300,
         category:"roja",
         description:"Esta es la IPA mas rica",
-        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1681914637/IPA_rcmjpi.png",
+        img:"https://res.cloudinary.com/dpiruiu8g/image/upload/v1683673578/IPA_rcmjpi-removebg-preview_v3lj3i.png",
         stock:"4"
     
     }

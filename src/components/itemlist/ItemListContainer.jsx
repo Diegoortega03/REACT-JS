@@ -1,58 +1,72 @@
 import { ItemList } from "./ItemList";
-import { products } from "../../productsMock";
+
 import{ useState, useEffect} from "react";
 import { useCounter } from "../../utils/hooks/useCounter";
 import { useParams , useNavigate} from "react-router-dom";
-
-
-
-
+import './ItemList.module.css';
+import { ClipLoader } from "react-spinners";
+import {db} from "../../firebaseConfig"
+import {getDocs, collection, getDoc, query, where} from "firebase/firestore"
 
 
 export const ItemListContainer = () => {
-
-
-
- 
     const { categoryName } = useParams();
-    const navigate = useNavigate ()
+    const navigate = useNavigate()
 
+    const {counter,increment,decrement,reset} = useCounter()
 
-  const {counter,increment,decrement,reset} = useCounter ()
+    const [items, setItems] = useState([]);
 
-  const [items, setItems] = useState([]);
+    useEffect(() => {
+     /*    const itemsCollection = collection(db,"products") */
 
-
-
-  
- useEffect(()=>{
-
-  const productsFiltered = products.filter(prod => prod.category === categoryName)
-  const tarea = new Promise((resolve, reject) => {
-    resolve(categoryName ? productsFiltered : products); 
-  });
-
-  tarea
-  .then((res) => setItems(res))
-  .catch((error) => console.log(error));
-
-  
- },[categoryName])
-
-
-
-  return (
-    <div>
-      <ItemList items={items}/>
+     let consulta 
+     const itemsCollection=collection(db, "products")
      
-    </div>
-  );
+     if (categoryName){
+        
+         const itemsCollectionfiltered=query(itemsCollection, where("category", "==", categoryName))
+         consulta = itemsCollectionfiltered
+        }
+         else{
+             consulta=itemsCollection
+
+         }
+    
+
+         
+        getDocs (consulta) 
+       
+
+        .then ((res)=>{
+           
+        const products= res.docs.map (product=>{
+            return{    ...product.data(),
+            id:product.id
+             }
+    } )
+    setItems (products)
+ })
+
+         .catch ((err)=> console.log(err))
+    }, [categoryName]);
+
+    if(
+        items.length===0
+    ){
+     return <ClipLoader color="hsla(0, 0%, 0%, 1)"  />
+    }
+
+
+    
+
+
+    return (
+        <div className="item-list-container">
+            <ItemList items={items} />
+        </div>
+    );
 };
 
 
-//counter
 
-{/* <h1>{counter}</h1>
-<button onClick={increment}>sumar</button>
-<button onClick={decrement}>restar</button>
-<button onClick={reset}>resetear</button> */}

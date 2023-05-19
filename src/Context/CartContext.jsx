@@ -1,22 +1,74 @@
+import { Filter } from "@mui/icons-material";
 import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
-const CartContextProvider = ({children}) => {
+const CartContextProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
-    const[ cart,setCart]=useState([]);
+  const isInCart = (id) => {
+    let existe = cart.some((elemento) => elemento.id === id);
 
-    const agregarAlCarrito=(producto)=>{
-        console.log(producto)
-    };
-
-    let data= {cart,agregarAlCarrito}
+    return existe;
+  };
 
 
-   
-  return <CartContext.Provider value={{data}}>
-    {children}
-    </CartContext.Provider>;
+  const agregarAlCarrito = (producto) => {
+    let existe = isInCart(producto.id);
+    if (existe) {
+
+        let newCart = cart.map((elemento)=> {
+          if (elemento.id ===producto.id){
+            return {...elemento , quantity: producto.quantity }
+          }
+          else{
+            return elemento
+          }
+        })
+
+      setCart(newCart)
+
+    } else {
+      setCart([...cart, producto]);
+    }
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const deleteProductById = (id) => {
+    const productFiltered = cart.filter((element) => element.id !== id);
+    setCart(productFiltered);
+  };
+
+  const getTotalPrice=()=>{
+    let total= cart.reduce((acc, elemento)=>
+    {
+      return acc+ (elemento.price*elemento.quantity)
+
+    },0)
+    return total
+  }
+
+  const getTotalQuantity =()=>{
+    let total = cart.reduce((acc,elemento)=>{   
+    return acc+ elemento.quantity
+  
+  },0 )
+
+
+
+  return total }
+
+  const getQuantityById =(id)=>{
+   let product= cart.find (elemento=>elemento.id === id )
+   return product?.quantity
+  }
+
+  let data = { cart, agregarAlCarrito, clearCart, deleteProductById,getTotalPrice, getQuantityById, getTotalQuantity, };
+
+  return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 
 export default CartContextProvider;
